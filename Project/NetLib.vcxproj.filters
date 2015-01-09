@@ -17,6 +17,10 @@
     <ClInclude Include="..\Include\NetLib\Core\Thread.h">
       <Filter>Core</Filter>
     </ClInclude>
+    <ClInclude Include="..\Include\NetLib\NetLib.h" />
+    <ClInclude Include="..\Include\NetLib\Core\ThreadFunctor.h">
+      <Filter>Core</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\Source\Core\Mutex.cpp">

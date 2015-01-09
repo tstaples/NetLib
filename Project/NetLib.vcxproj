@@ -15,6 +15,8 @@
     <ClInclude Include="..\Include\NetLib\Core\Mutex.h" />
     <ClInclude Include="..\Include\NetLib\Core\Semaphore.h" />
     <ClInclude Include="..\Include\NetLib\Core\Thread.h" />
+    <ClInclude Include="..\Include\NetLib\Core\ThreadFunctor.h" />
+    <ClInclude Include="..\Include\NetLib\NetLib.h" />
     <ClInclude Include="..\Include\NetLib\stdafx.h" />
   </ItemGroup>
   <ItemGroup>
@@ -53,12 +55,12 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <OutDir>..\Bin\$(Configuration)\</OutDir>
-    <IntDir>..\Build\$(Configuration)\</IntDir>
+    <OutDir>..\Bin\$(Configuration)\$(ProjectName)\</OutDir>
+    <IntDir>..\Build\$(Configuration)\$(ProjectName)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <OutDir>..\Bin\$(Configuration)\</OutDir>
-    <IntDir>..\Build\$(Configuration)\</IntDir>
+    <OutDir>..\Bin\$(Configuration)\$(ProjectName)\</OutDir>
+    <IntDir>..\Build\$(Configuration)\$(ProjectName)\</IntDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
