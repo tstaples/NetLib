@@ -18,6 +18,8 @@ public:
 	void Run();
 
 private:
+	NONCOPYABLE(Thread);
+
 	friend unsigned int __stdcall entryPoint(void* userData);
 	BaseThreadFunctor* mEntryPoint;
 
@@ -30,7 +32,7 @@ private:
 
 template<typename F>
 Thread::Thread(F function, u32 waitTime)
-	: mEntryPoint(new BaseThreadFunctor<F>(function))
+	: mEntryPoint(new ThreadFunctor<F>(function))
 	, mWaitTimeout(waitTime)
 	, mHandle(nullptr)
 	, mInitialized(false)
