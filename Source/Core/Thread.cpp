@@ -1,25 +1,7 @@
 #include "stdafx.h"
 #include "Core/Thread.h"
-
+#include "Core/ThreadFunctor.h"
 #include <process.h>
-
-// TODO: Move to separate file
-struct BaseThreadFunctor
-{
-	virtual ~BaseThreadFunctor() {}
-	virtual void Run() = 0;
-};
-
-// TODO: Variadic template to support n args
-template<typename T>
-struct ThreadFunctor : public BaseThreadFunctor
-{
-	ThreadFunctor(T functor) : mFunctor(functor) {}
-	virtual void Run() { mFunctor(); }
-	T mFunctor;
-};
-
-//----------------------------------------------------------------------------------------------------
 
 Thread::~Thread()
 {
