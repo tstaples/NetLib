@@ -14,11 +14,13 @@
     <ClInclude Include="..\Include\NetLib\Common.h" />
     <ClInclude Include="..\Include\NetLib\Core\Mutex.h" />
     <ClInclude Include="..\Include\NetLib\Core\Semaphore.h" />
+    <ClInclude Include="..\Include\NetLib\Core\Thread.h" />
     <ClInclude Include="..\Include\NetLib\stdafx.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\Source\Core\Mutex.cpp" />
     <ClCompile Include="..\Source\Core\Semaphore.cpp" />
+    <ClCompile Include="..\Source\Core\Thread.cpp" />
     <ClCompile Include="..\Source\stdafx.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

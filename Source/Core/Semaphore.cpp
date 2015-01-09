@@ -8,11 +8,13 @@ Semaphore::Semaphore(u32 timeout)
 	mHandle = CreateSemaphore(nullptr, 0, 1000, NULL);
 	ASSERT(mHandle != nullptr, "Semaphore failed to initialize");
 }
+//----------------------------------------------------------------------------------------------------
 
 Semaphore::~Semaphore()
 {
 	CloseHandle(mHandle);
 }
+//----------------------------------------------------------------------------------------------------
 
 Semaphore::State Semaphore::Wait()
 {
@@ -26,6 +28,7 @@ Semaphore::State Semaphore::Wait()
 	}
 	return Semaphore::Failed;		// Object not retrieved
 }
+//----------------------------------------------------------------------------------------------------
 
 void Semaphore::Release()
 {

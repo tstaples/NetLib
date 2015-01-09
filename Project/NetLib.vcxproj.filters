@@ -14,6 +14,9 @@
     </ClInclude>
     <ClInclude Include="..\Include\NetLib\Common.h" />
     <ClInclude Include="..\Include\NetLib\stdafx.h" />
+    <ClInclude Include="..\Include\NetLib\Core\Thread.h">
+      <Filter>Core</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\Source\Core\Mutex.cpp">
@@ -23,5 +26,8 @@
       <Filter>Core</Filter>
     </ClCompile>
     <ClCompile Include="..\Source\stdafx.cpp" />
+    <ClCompile Include="..\Source\Core\Thread.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
